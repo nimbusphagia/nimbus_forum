@@ -1,0 +1,14 @@
+nav(class='navigation-bar h-flex v-flex-center') 
+  .logo-container   
+    h2 Nimbus
+  ul(class='navigation-links h-flex')
+    li: a(class= 'nav-link color-hover', href="/") Home
+    li: a(class= 'nav-link color-hover', href="/discover") Discover
+    li: a(class= 'nav-link color-hover', href="/discussions/new") Start Discussion 
+    li: a(class= 'nav-link color-hover', href="/user/membership") Membership 
+    li: ul(class='nav-link  menu-user')
+          li(class='color-hover cursor'): a(href="#", class='menu-link') Menu
+          li: a(href="/user/profile", class='color-hover') Profile 
+          // Toggle according to user state
+          li: a(href="/user/logout", class='color-hover') Log out 
+

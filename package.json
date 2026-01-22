@@ -1,0 +1,34 @@
+{
+  "name": "curated_discussions",
+  "version": "1.0.0",
+  "description": "A small-scale discussion platform where conversations are intentionally created and moderated. Built as a learning project to showcase authentication, authorization tiers, and PostgreSQL schema design.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimbusphagia/curated_discussions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/nimbusphagia/curated_discussions/issues"
+  },
+  "homepage": "https://github.com/nimbusphagia/curated_discussions#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "express-validator": "^7.3.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.17.2",
+    "pug": "^3.0.3"
+  }
+}

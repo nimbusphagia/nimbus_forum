@@ -1,0 +1,43 @@
+.navigation-bar {
+  margin: 0;
+  padding: 0 var(--gap1);
+  height: 50px;
+  color: var(--light1);
+  background-color: var(--dark1);
+}
+
+.logo-container h2 {
+  color: var(--accent1);
+}
+
+.navigation-links {
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: var(--font2);
+}
+
+.navigation-links a {
+  font-size: var(--f_size2)
+}
+
+.menu-user {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: var(--dark1);
+}
+
+.menu-user li {
+  position: relative;
+  top: 100%;
+  padding: 0.7rem 1rem;
+}
+
+.menu-user li:not(:first-child) {
+  display: none;
+}
+
+.menu-user:hover li:not(:first-child) {
+  display: block;
+}
