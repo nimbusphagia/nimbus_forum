@@ -31,11 +31,11 @@ body {
   --f_size3: calc(1vh + 16px);
   --f_size4: calc(1vh + 10px);
   --f_size5: calc(1vh + 8px);
-  --accent1: #91132E;
-  --accent2: #E3627A;
-  --accent3: #2B7EA6;
+  --accent1: #EC0025;
+  --accent2: #FA375C;
+  --accent3: #106C9E;
   --dark1: #181818;
-  --dark2: #212121;
+  --dark2: rgb(23, 23, 23, 0.85);
   --light1: white;
   --light2: #E6E6E6;
   --gap0: 25px;
@@ -88,6 +88,7 @@ button {
   background-color: transparent;
   border: none;
   padding: none;
+  transition: transform ease-out 0.2s;
 }
 
 button:hover {
@@ -103,6 +104,7 @@ a,
 button {
   display: block;
   font-size: var(--f_size4);
+  transition: transform ease-out 0.2s;
 }
 
 
@@ -140,8 +142,6 @@ footer {
   transition: transform ease-out 0.3s;
 }
 
-
-
 /* General styles*/
 .h-flex {
   display: flex;
@@ -174,7 +174,6 @@ footer {
 }
 
 .bg-body {
-  background-image: url('/images/blue.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -197,7 +196,7 @@ footer {
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   font-size: var(--f_size3);
-  width: 45vw;
+  width: 40vw;
 }
 
 .form-buttons {

@@ -1,0 +1,21 @@
+include partial-views/head
+    link(rel="stylesheet", href="/css/login.css")
+    link(rel="stylesheet", href="/css/navbar.css")
+    link(rel="stylesheet", href="/css/index.css")
+    title= 'Log in'
+body(class='bg-body v-flex flex-center-all')
+  form(class="form login-form", method="POST")
+    div(class='form-title h-flex flex-center-all')
+      h1 Nimbus
+    .form-item 
+      label(for='username') Email :
+      input(id='username', type="email", name="username", required) 
+    .form-item 
+      label(for='password') Password :
+      input(id='password', type="password", name="password", required)
+    div(class='form-buttons h-flex' flex-center-all)
+      button(type='submit', class='create-btn') Log-in 
+    div(class='form-redirect h-flex flex-center-all')
+      p Don't have an account yet? 
+      a(href='sign-up' class='size-hover color-hover') Sign-up
+  include partial-views/footer

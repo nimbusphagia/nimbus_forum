@@ -1,3 +1,7 @@
+.bg-body {
+  background-image: url('/images/blue.jpg');
+}
+
 .form-title {
   padding-bottom: 10px;
 }
@@ -11,16 +15,26 @@
 
 .form-buttons {
   margin: auto;
-  margin-top: 20px;
+  margin-top: 12px;
+}
+
+.form-item {
+  gap: 0;
 }
 
 .form-buttons button {
-  background-color: #15648A;
+  background-color: var(--accent3);
   padding: var(--gap2) var(--gap1);
   border-radius: var(--radius2);
   box-shadow: var(--box2);
 }
 
 .form-redirect {
-  gap: 13px;
+  gap: 10px;
+}
+
+.form-redirect p,
+.form-redirect a {
+  margin: 0;
+  padding-bottom: 20px;
 }

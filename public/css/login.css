@@ -1,0 +1,30 @@
+.bg-body {
+  background-image: url('/images/orange.jpg');
+}
+
+.form-title {
+  padding-bottom: 10px;
+}
+
+.form-title h1 {
+  font-family: var(--font4);
+  color: var(--accent1);
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.form-buttons {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  background-color: var(--accent3);
+  padding: var(--gap2) var(--gap1);
+  border-radius: var(--radius2);
+  box-shadow: var(--box2);
+}
+
+.form-redirect {
+  gap: 13px;
+}

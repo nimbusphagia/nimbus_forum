@@ -10,5 +10,7 @@ nav(class='navigation-bar h-flex v-flex-center')
           li(class='color-hover cursor'): a(href="#", class='menu-link') Menu
           li: a(href="/user/profile", class='color-hover') Profile 
           // Toggle according to user state
-          li: a(href="/user/logout", class='color-hover') Log out 
+          li 
+            form(class='not-form' action='/logout' method='post')
+              button(type='submit', class='tag-btn color-hover') Log out 
 
