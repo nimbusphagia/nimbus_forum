@@ -33,13 +33,17 @@ body {
   --f_size5: calc(1vh + 8px);
   --accent1: #91132E;
   --accent2: #E3627A;
+  --accent3: #2B7EA6;
   --dark1: #181818;
   --dark2: #212121;
   --light1: white;
+  --light2: #E6E6E6;
+  --gap0: 30px;
   --gap1: 18px;
   --gap2: calc(var(--gap1) / 2);
   --border1: 2px solid black;
   --radius1: 2px;
+  --radius2: 5px;
   --box1: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   --box2: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   /* */
@@ -152,6 +156,11 @@ footer {
   align-items: center
 }
 
+.flex-center-all {
+  justify-content: center;
+  align-items: center;
+}
+
 .color-hover:hover {
   color: var(--accent2);
 }
@@ -162,4 +171,45 @@ footer {
 
 .cursor {
   cursor: pointer;
+}
+
+.bg-body {
+  background-image: url('/images/blue.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.form {
+  background-color: var(--dark2);
+  padding: var(--gap0) calc(var(--gap0) * 1.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap0);
+  font-family: var(--font3);
+  border-radius: 8px;
+  box-shadow: var(--box1);
+}
+
+
+.form-item {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  font-size: var(--f_size3);
+  width: 650px;
+}
+
+.form-buttons {
+  text-align: center;
+}
+
+input {
+  background-color: var(--light2);
+  color: black;
+  font-size: var(--f_size4);
+  font-weight: 500;
+  height: 100%;
+  text-align: center;
+  border-radius: var(--radius2);
 }

@@ -1,0 +1,26 @@
+.form-title {
+  padding-bottom: 20px;
+}
+
+.form-title h1 {
+  font-family: var(--font4);
+  color: var(--accent1);
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.form-buttons {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.form-buttons button {
+  background-color: #15648A;
+  padding: var(--gap2) var(--gap1);
+  border-radius: var(--radius2);
+  box-shadow: var(--box2);
+}
+
+.form-redirect {
+  gap: 13px;
+}

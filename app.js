@@ -2,6 +2,8 @@ import 'dotenv/config'
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url';
+import homeRouter from './src/routes/home.js';
+import signupRouter from './src/routes/sign-up.js';
 const app = express();
 
 // App setup
@@ -13,7 +15,8 @@ app.set('view engine', 'pug');
 
 // Routes
 
-app.get('/', (req, res) => res.render('home'));
+app.use(homeRouter);
+app.use(signupRouter);
 
 // Error catching middleware
 app.use((err, req, res, next) => {
