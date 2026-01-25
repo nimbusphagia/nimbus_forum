@@ -1,0 +1,78 @@
+.bg-body {
+  background-image: url('/images/purple1.jpg');
+}
+
+.wrapper {
+  min-height: var(--min-wrapper);
+  flex: 1;
+  justify-content: center;
+  margin: auto;
+  width: 80vw;
+}
+
+.m-container {
+  padding: 30px;
+  gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 80vh;
+  flex-shrink: 1;
+}
+
+.title h1 {
+  font-family: var(--font7);
+  text-shadow: 2px 2px 2px black;
+  color: var(--accent1);
+  text-align: center;
+  font-size: 50px;
+}
+
+.memberships {
+  gap: 50px;
+  height: 100%;
+}
+
+.m-item {
+  display: grid;
+  grid-template-rows: auto auto;
+  padding: 30px;
+  gap: 30px;
+}
+
+.img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  border: 5px solid var(--accent3);
+}
+
+.img-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.m-body {
+  align-items: center;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.m-body h3 {
+  font-size: var(--f_size2)
+}
+
+.m-body p {
+  font-size: var(--f_size4)
+}
+
+.locked {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+}

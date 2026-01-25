@@ -17,6 +17,7 @@ import { loginRouter } from './src/routes/login.js';
 import logoutRouter from './src/routes/logout.js';
 import profileRoute from './src/routes/profile.js';
 import discussionsRoute from './src/routes/discussions.js';
+import membershipRouter from './src/routes/membership.js';
 
 
 // App setup
@@ -90,6 +91,7 @@ app.use(loginRouter);
 app.use(logoutRouter);
 app.use(profileRoute);
 app.use(discussionsRoute);
+app.use(membershipRouter);
 
 // Error catching middleware
 app.use((err, req, res, next) => {
