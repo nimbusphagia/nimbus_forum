@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { homeGet } from "../controllers/home.js";
-import { isAuth } from "./authMiddleware.js";
 
 const homeRouter = new Router();
-homeRouter.get('/', isAuth, homeGet);
+homeRouter.get('/', (req, res) => res.redirect('/explore'));
+homeRouter.get('/explore', homeGet);
 
 export default homeRouter;

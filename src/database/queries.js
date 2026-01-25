@@ -34,6 +34,24 @@ async function createDiscussion(user_id, title, description, img_url = 'https://
   return rows[0].id;
 }
 
+async function getDiscussions() {
+  const sql = `
+    SELECT 
+      d.id,
+      d.title,
+      d.description,
+      d.created_at,
+      u.first_name || ' ' || u.last_name AS username,
+      u.img_url AS user_img
+    FROM discussions d
+    LEFT JOIN users u
+      ON d.created_by = u.id
+    ORDER BY d.created_at DESC
+  `;
+  const rows = await query(sql, []);
+  return rows;
+}
+
 async function getDiscussionById(id) {
   const sql = 'SELECT * FROM discussions WHERE id = $1';
   const rows = await query(sql, [id]);
@@ -68,7 +86,7 @@ async function getPostsByDiscussion(discussion_id) {
   return rows;
 }
 
-
 export { createUser, getUserById, getUserByEmail };
-export { createDiscussion, getDiscussionById };
+export { createDiscussion, getDiscussions, getDiscussionById };
 export { createPost, getPostsByDiscussion };
+

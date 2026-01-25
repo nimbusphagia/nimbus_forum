@@ -1,0 +1,59 @@
+.bg-body {
+  background-image: url('/images/purple1.jpg');
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 30px;
+  max-width: min(1200px, 80%);
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.discussion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 50px;
+  width: 100%;
+}
+
+.discussion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discussion-header h3 {
+  font-size: var(--f_size1);
+  font-weight: 900;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.user-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.discussion-body p {
+  text-align: justify;
+  line-height: 1.2;
+  font-size: var(--f_size4);
+}

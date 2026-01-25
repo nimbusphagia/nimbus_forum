@@ -1,16 +1,17 @@
 .bg-body {
-  background-image: url('/images/orange.jpg');
+  background-image: url('/images/dark-red.jpg');
 }
 
 .form-title {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  padding-top: 25px;
 }
 
 .form-title h1 {
   font-family: var(--font4);
   color: var(--accent1);
-  font-size: 100px;
-  font-weight: 600;
+  font-size: 75px;
+  height: 100%;
 }
 
 .form-buttons {

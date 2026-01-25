@@ -6,7 +6,7 @@ include partial-views/head
 body(class='bg-body v-flex flex-center-all')
   form(class="form login-form", method="POST")
     div(class='form-title h-flex flex-center-all')
-      h1 Nimbus
+      h1(id='logotype') Nimbus
     .form-item 
       label(for='username') Email :
       input(id='username', type="email", name="username", required) 

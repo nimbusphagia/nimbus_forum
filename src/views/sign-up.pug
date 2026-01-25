@@ -5,8 +5,8 @@ include partial-views/head
     title= 'Create new account'
 body(class='bg-body v-flex flex-center-all')
   form(class="form sign-up-form", method="POST")
-    div(class='form-title h-flex flex-center-all')
-      h1 Nimbus
+    div(class='wave-box form-title h-flex flex-center-all')
+      h1(id='logotype') Nimbus
     .form-item 
       label(for='first-name') Name :
       input(id='first-name', type="text", name="first_name", required)

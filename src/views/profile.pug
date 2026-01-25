@@ -8,6 +8,8 @@ body(class='profile-body bg-body')
   div(class='wrapper h-flex flex-center-all')
     form(class='form display-form')
       h1= 'Account details'
+      .form-img
+        img(src=user.img_url, alt="")
       .form-item 
         label(for='first-name') Name :
         input(id='first-name', type="text", name="first_name", disabled required value= user.first_name )
@@ -17,6 +19,9 @@ body(class='profile-body bg-body')
       .form-item 
         label(for='email') Email :
         input(id='email', type="email", name="email", disabled required value= user.email) 
+      .form-item 
+        label(for='imgUrl') Profile picture :
+        input(id='imgUrl', type="url", name="img_url", disabled required value= user.img_url) 
       .form-item
         label(for="role") Status :
         p #{user.role } (Tier 1)

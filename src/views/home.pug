@@ -1,8 +1,21 @@
 include partial-views/head
   link(rel="stylesheet", href="/css/navbar.css")
   link(rel="stylesheet", href="/css/index.css")
-  title= 'Curated Discussions'
-body
+  link(rel="stylesheet", href="/css/home.css")
+  title= 'Nimbus - Home'
+body(class='bg-body')
   include partial-views/navbar
-  h1= 'Index'
+  div(class='wrapper v-flex')
+    each d in discussions 
+      a(class='discussion float size2-hover opacity-hover' href="/discussions/" + d.id)
+        div(class='discussion-header ')
+          h3  #{d.title}
+          div(class='user-info')
+            .user-img
+              img(src=d.user_img alt="")
+            .user
+              p #{d.username}
+              p #{d.created_at.toDateString()}
+        div(class='discussion-body')
+          p #{d.description}
   include partial-views/footer

@@ -19,15 +19,39 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Groovy';
+  src: url('/fonts/GroovySoulsDemos-1jz9g.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marketing';
+  src: url('/fonts/MarketingDisparities.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marsen';
+  src: url('/fonts/MarsenpixelRegular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   /* Variables */
-  --navbar-height: 50px;
+  --navbar-height: 55px;
   --footer-height: 60px;
   --min-wrapper: calc(100vh - (var(--footer-height) + var(--navbar-height)));
   --font1: Helvetica;
   --font2: 'Vorline';
   --font3: 'Calive';
   --font4: 'Thirteen';
+  --font5: 'Groovy';
+  --font6: 'Marketing';
+  --font7: 'Marsen';
   --f_size0: calc(1vh + 32px);
   --f_size1: calc(1vh + 24px);
   --f_size2: calc(1vh + 20px);
@@ -173,6 +197,14 @@ footer {
   transform: scale(1.1);
 }
 
+.size2-hover:hover {
+  transform: scale(1.02);
+}
+
+.opacity-hover:hover {
+  background-color: var(--dark3);
+}
+
 .cursor {
   cursor: pointer;
 }
@@ -246,4 +278,11 @@ p {
   font-family: var(--font3);
   border-radius: 8px;
   box-shadow: var(--box1);
+}
+
+
+#logotype {
+  font-family: var(--font7);
+  text-shadow: 2px 2px 2px black;
+  color: var(--accent1);
 }
