@@ -271,6 +271,11 @@ p {
   box-shadow: var(--box2);
 }
 
+.cancel-btn {
+  padding: var(--gap2) var(--gap1);
+  border-radius: var(--radius2);
+}
+
 .float {
   background-color: var(--dark2);
   padding: var(--gap2) calc(var(--gap0) * 2);

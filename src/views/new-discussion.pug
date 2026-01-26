@@ -19,7 +19,7 @@ body(class='bg-body')
         label(for='description') Description:
         textarea(id='description',  name="description", required)
       div(class='form-buttons h-flex')
-        button(type='submit', class='cancel-btn') Cancel
+        a(href="/", class='cancel-btn color-hover') Cancel
         button(type='submit', class='create-btn') Create discussion
 
   include partial-views/footer

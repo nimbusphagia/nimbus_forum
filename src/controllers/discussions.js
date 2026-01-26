@@ -12,7 +12,6 @@ async function newGet(req, res) {
 }
 async function newPost(req, res) {
   const { title, description, img_url } = req.body;
-  // Check if img is a url
   try {
     const discussionId = await createDiscussion(req.user.id, title, description, img_url)
     return res.redirect('/discussions/' + discussionId);
