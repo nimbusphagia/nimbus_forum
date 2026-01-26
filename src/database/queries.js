@@ -21,7 +21,10 @@ async function getUserByEmail(email) {
   const rows = await query('SELECT * FROM users WHERE email = $1', [email]);
   return rows[0]
 }
-
+async function updateRole(user_id, role = 'trusted_member') {
+  const rows = await query('UPDATE users SET role = $2 WHERE id = $1', [user_id, role]);
+  return rows;
+}
 // Discussions
 
 async function createDiscussion(user_id, title, description, img_url = 'https://img.freepik.com/premium-vector/girl-with-plants-drinks-retro-style-illustration_926667-5360.jpg?semt=ais_hybrid&w=740&q=80') {
@@ -96,7 +99,17 @@ async function getPostsByUser(user_id) {
   return rows;
 }
 
-export { createUser, getUserById, getUserByEmail };
+async function getInteractionsByUser(user_id) {
+  const sql = `
+    SELECT COUNT(DISTINCT discussion_id) AS interactions
+    FROM posts
+    WHERE user_id = $1;
+  `;
+  const rows = await query(sql, [user_id]);
+  return rows[0].interactions;
+}
+
+export { createUser, getUserById, getUserByEmail, updateRole };
 export { createDiscussion, getDiscussions, getDiscussionById, getDiscussionsByUser };
-export { createPost, getPostsByDiscussion, getPostsByUser };
+export { createPost, getPostsByDiscussion, getPostsByUser, getInteractionsByUser };
 

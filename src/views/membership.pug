@@ -17,7 +17,7 @@ body(class='bg-body')
             h3 Novice
             .description
               p You can't be fully trusted yet, interact with posts to reach higher!
-              p Take part in 5 discussions to unlock Tier 2.
+              p Take part in #{countdown} discussions to unlock Tier 2.
           div(class= user.role === 'member' ? 'unlocked' : 'locked')
         div(class='m-item float ')
           div(class='img-container ')
@@ -26,7 +26,8 @@ body(class='bg-body')
             h3 Contributor
             .description
               p Start your own discussions, see who’s who, and keep your discussions moderated. 
-              p Create 10 discussions, each with 10 comments from other members to reach Tier 3.
+              p This may be the end of the road for now, but who knows what the future holds for you…
+              // p Create 10 discussions, each with 10 comments from other members to reach Tier 3.
           div(class= user.role === 'trusted_member' ? 'unlocked' : 'locked')
         div(class='m-item float ')
           div(class='img-container ' )

@@ -1,4 +1,4 @@
-import { createDiscussion, createPost, getDiscussionById, getPostsByDiscussion, getUserById } from "../database/queries.js";
+import { createDiscussion, createPost, getDiscussionById, getInteractionsByUser, getPostsByDiscussion, getPostsByUser, getUserById, updateRole } from "../database/queries.js";
 
 async function discussionsGet(req, res) {
   res.redirect('/explore');
@@ -47,8 +47,15 @@ async function discussionGet(req, res) {
 async function commentPost(req, res) {
   const { id } = req.query;
   const { content } = req.body;
+  const userId = req.user.id;
   try {
-    const post = await createPost(Number(id), Number(req.user.id), content);
+    await createPost(Number(id), Number(userId), content);
+    const interactions = await getInteractionsByUser(userId);
+
+    if (req.user.role === 'member' && interactions >= 5) {
+      await updateRole(userId);
+      return res.redirect('/user/membership?new-role=trusted');
+    }
     return res.redirect('/discussions/' + id);
   } catch (err) {
     console.log(err);

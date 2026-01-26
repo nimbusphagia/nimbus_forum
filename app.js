@@ -99,7 +99,7 @@ app.use((err, req, res, next) => {
 
   console.error(err);
 
-  res.status(status).json({
+  return res.status(status).json({
     error: {
       message: err.expose ? err.message : 'Internal Server Error',
     },
