@@ -10,7 +10,7 @@ body(class='bg-body')
       m.title 
         h1 Membership
       div(class='memberships')
-        div(class='m-item float ')
+        div(class=` m-item float + ${user.role === 'member' ? 'selected' : ''}`)
           div(class=' img-container ' )
             img(src="https://upload-os-bbs.hoyolab.com/upload/2025/03/30/402494676/1e649e6779bd8d5cc837f641bdc95e38_6032655024434046878.webp", alt="")
           div(class='m-body ')
@@ -19,7 +19,7 @@ body(class='bg-body')
               p You can't be fully trusted yet, interact with posts to reach higher!
               p Take part in #{countdown} discussions to unlock Tier 2.
           div(class= user.role === 'member' ? 'unlocked' : 'locked')
-        div(class='m-item float ')
+        div(class=` m-item float + ${user.role === 'trusted_member' ? 'selected' : ''}`)
           div(class='img-container ')
             img(src="https://preview.redd.it/chiikawa-and-hachiwares-friendship-is-so-sweet-v0-ke02d73xppre1.jpeg?width=640&crop=smart&auto=webp&s=f618ee1f82935879a805fdb80fa6acdb39019640", alt="")
           div(class='m-body ')
@@ -29,7 +29,7 @@ body(class='bg-body')
               p This may be the end of the road for now, but who knows what the future holds for you…
               // p Create 10 discussions, each with 10 comments from other members to reach Tier 3.
           div(class= user.role === 'trusted_member' ? 'unlocked' : 'locked')
-        div(class='m-item float ')
+        div(class=` m-item float + ${user.role === 'admin' ? 'selected' : ''}`)
           div(class='img-container ' )
             img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4jvbm3BF2E2tyxGlpxu25JeqmzNAhMcmOLg&s", alt="")
           div(class='m-body')

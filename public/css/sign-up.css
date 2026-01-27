@@ -1,15 +1,19 @@
 .bg-body {
-  background-image: url('/images/blue.jpg');
+  background-image: url('/images/purple1.jpg');
+}
+
+.sign-up-form {
+  justify-content: center;
+  gap: 15px;
+  width: min(55%, 600px);
 }
 
 .form-title {
-  padding-bottom: 10px;
-  padding-top: 20px;
+  padding: 10px;
 }
 
 .form-title h1 {
-  font-family: var(--font4);
-  color: var(--accent1);
+  color: var(--accent4);
   font-size: 75px;
   font-weight: 600;
 }
@@ -23,13 +27,12 @@
   gap: 0;
 }
 
+.form-item label {
+  width: 50%;
+}
 
-
-.form-buttons button {
-  background-color: var(--accent3);
-  padding: var(--gap2) var(--gap1);
-  border-radius: var(--radius2);
-  box-shadow: var(--box2);
+.form-item input {
+  text-align: center;
 }
 
 .form-redirect {
@@ -40,4 +43,23 @@
 .form-redirect a {
   margin: 0;
   padding-bottom: 20px;
+}
+
+.create-btn {
+  line-height: 1;
+  padding: 3px 15px;
+  box-shadow: none;
+  font-family: var(--font2);
+  font-size: 33px;
+  border-radius: 4px;
+  color: var(--accent1);
+  background-color: transparent;
+  opacity: 0.95;
+  transition: background-color ease-out 0.1s;
+}
+
+.create-btn:hover {
+  transform: none;
+  color: white;
+  background-color: var(--accent1);
 }

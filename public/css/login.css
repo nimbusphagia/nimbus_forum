@@ -2,6 +2,10 @@
   background-image: url('/images/dark-red.jpg');
 }
 
+.login-form {
+  padding-bottom: 20px;
+}
+
 .form-title {
   padding-bottom: 20px;
   padding-top: 25px;
@@ -14,16 +18,31 @@
   height: 100%;
 }
 
-.form-buttons {
-  margin: auto;
-  margin-top: 20px;
+.form-item label {
+  width: 50%;
 }
 
-.form-buttons button {
-  background-color: var(--accent3);
-  padding: var(--gap2) var(--gap1);
-  border-radius: var(--radius2);
-  box-shadow: var(--box2);
+.form-buttons {
+  margin: auto;
+}
+
+.create-btn {
+  line-height: 1;
+  padding: 3px 15px;
+  box-shadow: none;
+  font-family: var(--font2);
+  font-size: 30px;
+  border-radius: 4px;
+  color: var(--accent1);
+  background-color: transparent;
+  opacity: 0.95;
+  transition: background-color ease-out 0.1s;
+}
+
+.create-btn:hover {
+  transform: none;
+  color: white;
+  background-color: var(--accent1);
 }
 
 .form-redirect {

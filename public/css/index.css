@@ -54,16 +54,17 @@ body {
   --font7: 'Marsen';
   --f_size0: calc(1vh + 32px);
   --f_size1: calc(1vh + 24px);
-  --f_size2: calc(1vh + 20px);
+  --f_size2: calc(1vh + 22px);
   --f_size3: calc(1vh + 16px);
-  --f_size4: calc(1vh + 10px);
+  --f_size4: calc(1vh + 11px);
   --f_size5: calc(1vh + 8px);
   --accent1: #EC0025;
   --accent2: #FA375C;
   --accent3: #106C9E;
+  --accent4: rgb(255, 0, 81, 0.7);
   --dark1: #181818;
   --dark2: rgb(23, 23, 23, 0.85);
-  --dark3: rgba(4, 4, 4, 0.85);
+  --dark3: rgba(4, 4, 4, 0.55);
   --light1: white;
   --light2: #C2C2C2;
   --gap0: 25px;
@@ -151,7 +152,7 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: var(--dark1);
+  background-color: rgb(23, 23, 23, 0.9);
 }
 
 .footer-content {
@@ -202,7 +203,7 @@ footer {
 }
 
 .opacity-hover:hover {
-  background-color: var(--dark3);
+  background-color: var(--dark2);
 }
 
 .cursor {
@@ -216,7 +217,7 @@ footer {
 }
 
 .form {
-  background-color: var(--dark2);
+  background-color: var(--dark3);
   padding: var(--gap2) calc(var(--gap0) * 2);
   color: white;
   display: flex;
@@ -227,36 +228,39 @@ footer {
   box-shadow: var(--box1);
 }
 
-
 .form-item {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr;
-  align-items: center;
-  font-size: var(--f_size3);
-  width: 40vw;
+  display: flex;
+  font-size: 22px;
+  gap: 8px;
+  width: 100%;
 }
 
 .form-buttons {
   text-align: center;
 }
 
-input {
-  background-color: var(--light2);
-  color: black;
-  font-size: var(--f_size4);
-  font-weight: 500;
-  height: 100%;
-  text-align: center;
-  border-radius: var(--radius2);
+.form-item label {
+  font-size: 20px;
+  opacity: 0.9;
+  min-width: fit-content;
 }
 
-textarea {
-  background-color: var(--light2);
-  color: black;
-  font-size: var(--f_size4);
-  font-weight: 500;
+.form-item input {
+  font-size: 18px;
+  padding: 4px;
+}
+
+.form-item textarea,
+.form-item input {
+  box-sizing: border-box;
+  width: 100%;
   height: 100%;
+  color: var(--light1);
+  background-color: transparent;
+  border: 1.2px transparent;
   border-radius: var(--radius2);
+  background-color: rgb(0, 0, 0, 0.3);
+  font-weight: 500;
 }
 
 p {
@@ -277,7 +281,7 @@ p {
 }
 
 .float {
-  background-color: var(--dark2);
+  background-color: var(--dark3);
   padding: var(--gap2) calc(var(--gap0) * 2);
   color: white;
   font-family: var(--font3);
@@ -289,5 +293,4 @@ p {
 #logotype {
   font-family: var(--font7);
   text-shadow: 2px 2px 2px black;
-  color: var(--accent1);
 }

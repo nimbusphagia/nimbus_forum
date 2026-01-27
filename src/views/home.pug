@@ -9,13 +9,13 @@ body(class='bg-body')
     each d in discussions 
       a(class='discussion float size2-hover opacity-hover' href="/discussions/" + d.id)
         div(class='discussion-header ')
-          h3  #{d.title}
+          div(class='d-title')
+            h3  #{d.title}
           div(class='user-info')
             .user-img
-              img(src=d.user_img alt="")
+             // img(src=d.user_img alt="")
             .user
               p #{d.username}
-              p #{d.created_at.toDateString()}
         div(class='discussion-body')
           p #{d.description}
   include partial-views/footer

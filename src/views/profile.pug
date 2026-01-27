@@ -25,7 +25,7 @@ body(class='profile-body bg-body')
           input(id='imgUrl', type="url", name="img_url", disabled required value= user.img_url) 
         .form-item
           label(for="role") Status :
-          p #{user.role } (Tier 1)
+          p #{user.role === 'trusted_member' ? 'Contributor' : 'Novice'} 
     div(class='profile-utilities')
       div(class='profile-stats float')
         .stats-header
